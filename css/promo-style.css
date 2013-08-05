@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #A2A2A2;
+}
+
+a {
+	text-decoration: none;
+}
+
+button#cboxClose {
+	color: #000;
+}
+
+/* styling for the main page */
+
+.course-links {
+	background-color: #444;
+	width: 70%;
+	margin: auto;
+	padding: 20px;
+	color: #fff;
+}
+
+.course-links a {
+	color: #ccc;
+}
+
+.course-links a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.inner-box {
+	background-color: #333;
+	border: 5px solid #999;
+	padding: 10px 20px 20px 20px;
+
+}
+
+.outer-box {
+	background-color: #fff;
+	padding: 10px 30px 50px 30px;
+	margin: 0px 27px 20px 20px;
+}
+
+.outer-box-no-inner {
+	background-color: #fff;
+	color: #000;
+	padding: 10px 30px 50px 30px;
+	margin: 0px 27px 20px 20px;
+}
+
+
+/* styling for the course content */
+
+.course-content {
+	float:left;
+	width: 411px;
+	height:221px;
+	overflow:auto;
+}
+
+.cgma-content {
+	color: #fff;
+}
+
+.cgma-content h1 {
+	font-size: 16pt;
+	font-weight: normal;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.cgma-content a {
+	font-weight: bold;
+	color: #FC0;
+}
+
+.course-content-video frame {
+	padding-left: 100px;
+}
+
+.course-image {
+	float:left;
+	padding-left: 20px;
+}
+
+.course-large {
+	height: 500px;
+}
+
+.course-notepad {
+	border: 1px solid #000;
+	background-color:#FFC;
+	width: 200px;
+	height: 300px;
+	float:left;
+}
+
+.calculator {
+	float:left;
+}
+
+.course-spreadsheet {
+	width: 200px;
+	height: 300px;
+	border: 1px solid #000;
+	background-color: #ccc;
+	float:left;
+}

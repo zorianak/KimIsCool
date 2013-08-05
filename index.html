@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kim Is Cool (dot me)</title>
+
+
+ <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+var ADAPT_CONFIG = {
+  path: 'css/',
+  dynamic:true,
+  range: [
+    '0px    to 760px  = mobile.css',
+    '760px  to 980px  = 720.css',
+    '980px  to 1280px = 960.css',
+    '1280px to 1600px = 1200.css',
+    '1600px to 1920px = 1560.css',
+    '1920px           = fluid.css'
+  ]
+};
+</script>
+
+
+<script src="js/adapt.js"></script>
+</head>
+
+<body>
+
+<div id="maincontent" class="container_12">
+	<div id="headerimg" class="grid_12">
+    <img src="images/headerimg.png" alt="Kim Holmes, Web Developer and graphics designer.  Contact me at sites@kimiscool.me" />
+    </div>
+    
+    <ul id="sidebar" class="grid_3">
+    	<li class="skills">Skillset</li>
+    	<li class="workexp">Work Experience</li>
+    	<li class="portfolio">Portfolio</li>
+        <div style="clear:both;"></div>
+    </ul>
+    
+    <div id="content" class="grid_9">
+    	<p>Greetings!  Welcome to my one-page resume site.</p>
+        
+        <p>This page is designed in order for me to show off a few basic CSS 3 and jQuery skills.  It is only supported in IE9+, and the latest Chrome and Firefox.  Note that as this is my personal site, I only do a minimal amount of IE testing - too many things are broken in it, and given that I only spend my free time on this site, I try to dedicate said small amounts of free time to updating features/experience to match the newest browsers (it'd be a different story if I could get paid to update this site ;) )</p>
+        
+        <p>The menu to the right is an unordered list (as in, no-link navigation!).  Not that you can tell - just try clicking on any line to display the content there.  If you wish to see this message again (for whatever reason - I can't imagine why you would) then just refresh the page.</p>
+        
+        <p>This page currently uses the following technologies:
+        	<ul>
+            	<li>HTML 5 - not that this is significant, as I haven't included any real animated features that can't use jQuery</li>
+                <li>CSS 3 - that's how the navigation receives its box shadow!</li>
+                <li>jQuery - that's how the content is displayed</li>
+                <li>Adapt.js - try resizing your browser.  Cool!  The site will resize itself dynamically (or at least, download a new stylesheet to match the size of your browser).  This isn't <em>true</em> responsive design, but it's close.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+	$("li.skills").click(function() {
+		var content = $("#content");
+		$("li.skills").addClass('selected');
+		$("li.workexp").removeClass('selected');
+		$("li.portfolio").removeClass('selected');
+		
+		//hide any previous classes
+		content.removeAttr("class").hide().fadeIn();
+		
+		//add in relevant classes
+		content.addClass("grid_9 skillsBg");
+		
+		// add in relevant HTML via string
+		var html = "<h1>Web Development</h1>";
+		html += "<ul>";
+		html += "<li>JavaScript/jQuery</li>";
+		html += "<li>HTML/CSS</li>";
+		html += "<li>PHP</li>";
+		html += "<li>MySQL</li>";
+		html += "<li>Java</li>";
+		html += "</ul>";
+		
+		html += "<h1>Graphics</h1>";
+		html += "<ul>";
+		html += "<li>Adobe Illustrator (Print/Web)</li>";
+		html += "<li>Adobe InDesign (Print)</li>";
+		html += "<li>Adobe Photoshop (Print/Web/Photo Manipulation</li>";
+		html += "</ul>";
+		content.html(html);
+	})
+	
+	$("li.workexp").click(function() {
+		var content = $("#content");
+		$("li.workexp").addClass('selected');
+		$("li.portfolio").removeClass('selected');
+		$("li.skills").removeClass('selected');
+		//hide any previous classes
+		content.removeAttr("class").hide().fadeIn();
+		
+		//add in relevant classes
+		content.addClass("grid_9 workexperBg");
+		
+		// add in relevant HTML.  But first, we'll build a string
+		var html = "<h1>VSP Online</h1>";
+		html +="<h2>Web Developer</h2>";
+		html +="<h3>October 2012 - Present</h3>";
+		html +="<ul>";
+		html +="<li>Design wireframes and presentations for projects and sites related to VSP and their partners HTML 5 and CSS 3</li>"
+		html +="<li>Advise business partners and other teams on user experience procredures and best practices</li>";
+		html +="<li>Integrate back-end JSP provided by back-end developers with the front-end user experience</li>";
+		html +="</ul>";
+		
+		html += "<h1>Eyefinity</h1>";
+		html +="<h2>Java Application Developer</h2>";
+		html +="<h3>May 2012 - October 2012</h3>";
+		html +="<ul>";
+		html +="<li>Create web applications utilizing Java, JavaScript, and JSP</li>"
+		html +="<li>Debug faulty code</li>";
+		html +="<li>Update existing applications with new features and up-to-date code</li>";
+		html +="</ul>";
+		
+		html += "<h1>California State University, Sacramento</h1>";
+		html +="<h2>Web Developer</h2>";
+		html +="<h3>January 2010 - May 2012</h3>";
+		html +="<ul>";
+		html +="<li>Create web applications utilizing PHP, MySQL, and related technologies</li>"
+		html +="<li>Create interfaces for new applications, and update interfaces for older applications</li>";
+		html +="<li>Update existing applications with new features and up-to-date code</li>";
+		html +="</ul>";
+		
+		html += "<h1>Apple, Inc</h1>";
+		html +="<h2>At-Home Advisor</h2>";
+		html +="<h3>May 2010 - May 2011</h3>";
+		html +="<ul>";
+		html +="<li>Advise users on iOS best practices</li>"
+		html +="<li>Assisst developers in discovering common issues with iOS devices</li>";
+		html +="<li>Directly assist customers with issues related to iOS</li>";
+		html +="</ul>";
+		
+		html += "<h1>Business Development Institute</h1>";
+		html +="<h2>At-Home Advisor</h2>";
+		html +="<h3>June 2008 - December 2008</h3>";
+		html +="<ul>";
+		html +="<li>Create customized wireframes and designs utilizing Adobe suite (Illustrator and Photoshop)</li>"
+		html +="<li>Translate provided (and created) designs into functional HTML/CSS and JavaScript</li>";
+		html +="<li>Optimize existing sites for proper user experience and search engine optimization</li>";
+		html +="</ul>";
+		
+		content.html(html);
+	})
+	
+	$("li.portfolio").click(function() {
+		var content = $("#content");
+		$("li.portfolio").addClass('selected');
+		$("li.workexp").removeClass('selected');
+		$("li.skills").removeClass('selected');
+		//hide any previous classes
+		content.removeAttr("class").hide().fadeIn();
+		
+		//add in relevant classes
+		content.addClass("grid_9 portfolioBg");
+		
+		var html = "";
+		
+		content.html(html);
+	})
+
+</script>
+</body>
+</html>

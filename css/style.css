@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: 'Myriad Pro', arial, helvetica, sans-serif;
+}
+
+ul#sidebar {
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+}
+
+#sidebar li {
+	font-size: 24pt;
+	padding: 15px;
+	margin: 0;
+}
+
+#sidebar li:hover {
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.skills.selected {
+	background-color: #cce599;
+	-webkit-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	-moz-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+}
+
+.workexp.selected {
+	background-color: #7fcccc;
+	-webkit-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	-moz-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+}
+
+.portfolio.selected {
+	background-color: #e5e599;
+	-webkit-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	-moz-box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+	box-shadow: inset 0 2px 6px #000,
+            inset 0 -2px 6px #000;
+}
+
+li.skills:hover {
+	background-color: #cce599;
+}
+
+li.workexp:hover {
+	background-color: #7fcccc;
+	
+}
+
+li.portfolio:hover {
+	background-color: #e5e599;
+}
+
+#content {
+	margin:0;
+	color:#000;
+	padding: 20px;
+}
+
+.skillsBg {
+	background-color: #cce599;
+}
+
+.workexperBg {
+	background-color: #7fcccc;
+}
+
+.portfolioBg {
+	background-color: #e5e599;
+}
