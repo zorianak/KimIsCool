@@ -26,10 +26,10 @@
 <div id="mainContent" class="container_12">
     
     <ul id="sidebar" class="grid_3">
-    	<li><a href="#siteWelcomeScreen">Home</a>
-    	<li class="skills"><a href="#skills">Skillset</a></li>
-    	<li class="workexp"><a href="#workexp">Work Experience</a></li>
-    	<li class="portfolio"><a href="#portfolio">Portfolio</a></li>
+    	<li><a class="subnav" href="#siteWelcomeScreen">Home</a>
+    	<li class="skills"><a class="subnav" href="#skills">Skillset</a></li>
+    	<li class="workexp"><a class="subnav" href="#workexp">Work Experience</a></li>
+    	<li class="portfolio"><a class="subnav" href="#portfolio">Portfolio</a></li>
         <div style="clear:both;"></div>
     </ul>
     
@@ -116,10 +116,10 @@
         <div id="portfolio" class="grid_9 contentSelection">
             <h2>My Work</h2>
             <ul class="portfolio">
-                <li class="forwardfocus portfolioItem"><a href="../images/portfolio/forwardfocus.png" class="portfolio_item"><img src="images/spacer.png" alt="Forward Focus Media WordPress Template" /></a></li>
-                <li class="envelopedetails portfolioItem"><a href="../images/portfolio/june2009details.png" class="portfolio_item"><img src="images/spacer.png" alt="Contact Form design prototype" /></a></li>
-                <li class="charlesrich portfolioItem"><a href="../images/portfolio/charlesrich.png" class="portfolio_item"><img src="images/spacer.png" alt="Charles Rich Accounting" /></a></li>
-                <li class="mobilephone portfolioItem"><a href="../images/portfolio/mobilephone.png" class="portfolio_item"><img src="images/spacer.png" alt="Mobile Phone developer design example" /></a></li>
+                <li class="forwardfocus portfolioItem"><a href="/images/portfolio/forwardfocus.png" class="portfolio_item" target="_blank"><img src="images/spacer.png" alt="Forward Focus Media WordPress Template" /></a></li>
+                <li class="envelopedetails portfolioItem"><a href="/images/portfolio/june2009details.png" class="portfolio_item"><img src="images/spacer.png" alt="Contact Form design prototype" /></a></li>
+                <li class="charlesrich portfolioItem"><a href="/images/portfolio/charlesrich.png" class="portfolio_item"><img src="images/spacer.png" alt="Charles Rich Accounting" /></a></li>
+                <li class="mobilephone portfolioItem"><a href="/images/portfolio/mobilephone.png" class="portfolio_item"><img src="images/spacer.png" alt="Mobile Phone developer design example" /></a></li>
              </ul>
         </div>
      </div><!-- end content -->
@@ -135,8 +135,8 @@
 
 	/* any time a link is clicked, its HREF should point toward a certain element ID. we will take advantage of that.*/
 	
-	$('a').click(function(e) {
-		
+	$('.subnav').click(function(e) {
+		e.preventDefault();
 		/* if it has a certain class, we don't want to hide all contentSelections.*/
 		var linkClass = $(this).attr('class');
 		
@@ -163,6 +163,34 @@
 		$(selectedOption).show(500);
 	});
 	
+	/* logic for our lightbox */
+	$('.portfolio_item').click(function(e) {
+		// prevent browser from opening image in new tab
+		e.preventDefault();
+		alert('portfolio item clicked');
+		
+		// set its href
+		var img_href = $(this).attr("href");
+		if ($('#lightboxWrapper').length > 0) {
+			// the href will dynamically be loaded into the rendered lightbox HTML
+			$('#lightboxContent').html('<img src="' + img_href + '" />');
+		
+			$('#lightboxWrapper').show(500);
+		} else {
+			var lightbox = '<div id="lightboxWrapper">' +
+				'<p class="closeBox">close</p>' +
+				'<div id="lightboxContent">' +
+				'<img src="#" />' +
+				'</div>' +
+				'</div>';
+				
+				$('body').append(lightbox);
+		}
+	});
+	
+	$('#lightboxWrapper').live('click', function() {
+		$('#lightboxWrapper').hide(500);
+	});
 });
 	
 </script>

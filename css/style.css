@@ -155,3 +155,17 @@ li.mobilephone {
 	height: 100%;
 	background: url(../images/overlay.png) repeat;
 }
+
+#lightboxContent img {
+	box-shadow: 0 0 25px #111;
+	-webkit-box-shadow: 0 0 25px #111;
+	-moz-box-shadow: 0 0 25px #111;
+	max-width: 940px;
+}
+
+#closeBox {
+	text-align: right;
+	color: #ddd;
+	margin-right: 20px;
+	font-size: 12px;
+}
