@@ -116,7 +116,7 @@
         <div id="portfolio" class="grid_9 contentSelection">
             <h2>My Work</h2>
             <ul class="portfolio">
-                <li class="forwardfocus portfolioItem"><a href="/images/portfolio/forwardfocus.png" class="portfolio_item" target="_blank"><img src="images/spacer.png" alt="Forward Focus Media WordPress Template" /></a></li>
+                <li class="forwardfocus portfolioItem"><a href="images/portfolio/forwardfocus.png" class="portfolio_item" target="_blank"><img src="images/spacer.png" alt="Forward Focus Media WordPress Template" /></a></li>
                 <li class="envelopedetails portfolioItem"><a href="/images/portfolio/june2009details.png" class="portfolio_item"><img src="images/spacer.png" alt="Contact Form design prototype" /></a></li>
                 <li class="charlesrich portfolioItem"><a href="/images/portfolio/charlesrich.png" class="portfolio_item"><img src="images/spacer.png" alt="Charles Rich Accounting" /></a></li>
                 <li class="mobilephone portfolioItem"><a href="/images/portfolio/mobilephone.png" class="portfolio_item"><img src="images/spacer.png" alt="Mobile Phone developer design example" /></a></li>
@@ -167,7 +167,6 @@
 	$('.portfolio_item').click(function(e) {
 		// prevent browser from opening image in new tab
 		e.preventDefault();
-		alert('portfolio item clicked');
 		
 		// set its href
 		var img_href = $(this).attr("href");
