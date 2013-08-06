@@ -3,82 +3,155 @@
 
 body {
 	font-family: 'Myriad Pro', arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #e4e1d2;
+}
+html { 
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+h3 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-top: 0;
+}
+
+#headerContent {
+	width: 100%;
+	background: url(../images/headerimg.png) repeat-x bottom left;
+	height: 180px;
+	margin: 0;
+	padding: 0;
+}
+
+#heading {
+	
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-left: 15px;
+	color: #aaa;
+	text-shadow: rgb(45, 45, 45) 3px 3px 6px;
+}
+
+#heading h1 {
+	color: #bbb;
+}
+
+#heading p {
+	width: 125px;
+}
+
+#mainContent {
+
+	margin: 0 auto;
 }
 
 ul#sidebar {
 	margin: 0;
 	padding: 0;
 	list-style-type:none;
+	width: 20%;
+	float: left;
 }
 
 #sidebar li {
-	font-size: 24pt;
 	padding: 15px;
 	margin: 0;
 }
 
-#sidebar li:hover {
-	font-weight: bold;
-	cursor:pointer;
-}
-
-.skills.selected {
-	background-color: #cce599;
-	-webkit-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	-moz-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-}
-
-.workexp.selected {
-	background-color: #7fcccc;
-	-webkit-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	-moz-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-}
-
-.portfolio.selected {
-	background-color: #e5e599;
-	-webkit-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	-moz-box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-	box-shadow: inset 0 2px 6px #000,
-            inset 0 -2px 6px #000;
-}
-
-li.skills:hover {
-	background-color: #cce599;
-}
-
-li.workexp:hover {
-	background-color: #7fcccc;
-	
-}
-
-li.portfolio:hover {
-	background-color: #e5e599;
-}
-
-#content {
+.content {
 	margin:0;
 	color:#000;
 	padding: 20px;
+	float: left;
+	width: 75%;
 }
 
-.skillsBg {
-	background-color: #cce599;
+.dateEmployed {
+	color: #666;
 }
 
-.workexperBg {
-	background-color: #7fcccc;
+/* Portfolio Styling */
+
+ul.portfolio {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.portfolioBg {
-	background-color: #e5e599;
+ul.portfolio li.portfolioItem {
+	float: left;
+	min-height: 220px;
+	max-width: 300px;
+	margin: 10px;
+	border: 2px solid #ddd;
+	width: 45%;
+}
+
+ul.portfolio li.portfolioItem a img {
+	width: 100%;
+	height: 100%;
+}
+
+li.forwardfocus {
+	background: url(../images/portfolio/forwardfocusthumb.png) no-repeat top left;
+	background-size: 100%;
+}
+
+li.envelopedetails {
+	background: url(../images/portfolio/june2009detailsthumb.png) no-repeat top left;
+	background-size: 100%;
+}
+
+li.charlesrich {
+	background: url(../images/portfolio/charlesrichthumb.png) no-repeat top left;
+	background-size: 100%;
+}
+
+li.mobilephone {
+	background: url(../images/portfolio/mobilephonesthumb.jpg) no-repeat top left;
+	background-size: 100%;
+}
+
+
+/********* Kim's Lightbox Styling ****************/
+
+#lightboxWrapper {
+	width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-top: none;
+	padding: 25px;
+	border-radius: 5px;
+}
+
+#lightboxOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/overlay.png) repeat;
 }

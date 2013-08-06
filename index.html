@@ -8,167 +8,163 @@
  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/responsive-style.css" rel="stylesheet" type="text/css">
 
-<script type="text/javascript">
-var ADAPT_CONFIG = {
-  path: 'css/',
-  dynamic:true,
-  range: [
-    '0px    to 760px  = mobile.css',
-    '760px  to 980px  = 720.css',
-    '980px  to 1280px = 960.css',
-    '1280px to 1600px = 1200.css',
-    '1600px to 1920px = 1560.css',
-    '1920px           = fluid.css'
-  ]
-};
-</script>
-
-
-<script src="js/adapt.js"></script>
 </head>
 
 <body>
 
-<div id="maincontent" class="container_12">
-	<div id="headerimg" class="grid_12">
-    <img src="images/headerimg.png" alt="Kim Holmes, Web Developer and graphics designer.  Contact me at sites@kimiscool.me" />
+<div id="headerContent">
+	<div id="heading" class="grid_12">
+    	<h1>Kimberly Holmes</h1>
+    	<p class="contact">
+    	yes@kimiscool.me 
+    	(916) 538.2194</p>
     </div>
+</div>
+
+<div id="mainContent" class="container_12">
     
     <ul id="sidebar" class="grid_3">
-    	<li class="skills">Skillset</li>
-    	<li class="workexp">Work Experience</li>
-    	<li class="portfolio">Portfolio</li>
+    	<li><a href="#siteWelcomeScreen">Home</a>
+    	<li class="skills"><a href="#skills">Skillset</a></li>
+    	<li class="workexp"><a href="#workexp">Work Experience</a></li>
+    	<li class="portfolio"><a href="#portfolio">Portfolio</a></li>
         <div style="clear:both;"></div>
     </ul>
     
-    <div id="content" class="grid_9">
-    	<p>Greetings!  Welcome to my one-page resume site.</p>
+    <div class="content">
+        <div id="siteWelcomeScreen" class="grid_9 siteWelcomeScreen">
+            <h2>Greetings!  I'm Kim!</h2>
+            <p>I've been developing <strong>compliant, usable</strong> sites since 2008.  I'm absolutely <strong>passionate</strong> about my work with <strong>HTML/CSS</strong>, <strong>JavaScript/jQuery</strong>, <strong>PHP</strong>, <strong>Java</strong>, and <strong>any and all things web development related.</strong></p>
+            <p>In addition, I love creating <strong>graphics.</strong>  I began using <strong>Adobe Photoshop, Illustrator, and InDesign</strong> right around the same time I began coding - a young kid, maybe 15 at the time, and still figuring the world out.  Just like with web development, I have been creating web graphics and illustrations for five years now.</p>
+            <p>This site details my work experience, a few portfolio examples, and gives an overview of my skills and areas of expertise.  For blogging, I recommend my web studio site, <a href="http://riverscapewebstudios.com" target="_blank">Riverscape Web Studios.</a></p>
+        </div>
         
-        <p>This page is designed in order for me to show off a few basic CSS 3 and jQuery skills.  It is only supported in IE9+, and the latest Chrome and Firefox.  Note that as this is my personal site, I only do a minimal amount of IE testing - too many things are broken in it, and given that I only spend my free time on this site, I try to dedicate said small amounts of free time to updating features/experience to match the newest browsers (it'd be a different story if I could get paid to update this site ;) )</p>
+        <div id="skills" class="grid_9 contentSelection">
+            <h2>What I like to do...</h2>
+            <ul>
+                <li>JavaScript/jQuery</li>
+                <li>HTML/CSS</li>
+                <li>Responsive Design</li>
+                <li>PHP/MySQL</li>
+                <li>Java</li>
+                <li>Version Control: PVCS, Git, Subversion, and Mercurial</li>
+                <li>Adobe: Photoshop, Illustrator, InDesign</li>
+             </ul>
+        </div>
         
-        <p>The menu to the right is an unordered list (as in, no-link navigation!).  Not that you can tell - just try clicking on any line to display the content there.  If you wish to see this message again (for whatever reason - I can't imagine why you would) then just refresh the page.</p>
-        
-        <p>This page currently uses the following technologies:
-        	<ul>
-            	<li>HTML 5 - not that this is significant, as I haven't included any real animated features that can't use jQuery</li>
-                <li>CSS 3 - that's how the navigation receives its box shadow!</li>
-                <li>jQuery - that's how the content is displayed</li>
-                <li>Adapt.js - try resizing your browser.  Cool!  The site will resize itself dynamically (or at least, download a new stylesheet to match the size of your browser).  This isn't <em>true</em> responsive design, but it's close.</li>
+        <!-- Work Experience -->
+        <div id="workexp" class="grid_9 contentSelection">
+            <h2>Work Experience</h2>
+            
+            <p class="workJob">
+            <h3>Vision Service Providers (VSP Global)</h3>
+            <h4>Web Developer (Contract)</h4>
+            <p class="dateEmployed">October 2012 - July 2013</p>
+            <ul class="workDescription">
+                <li>Responsive CSS/HTML, Java/JSP, and jQuery/JavaScript were utilized to
+    implement new web pages and applications</li>
+                <li>Became acting front-end lead developer for weekly content installs, and took
+    ownership of launching updates and new sites</li>
+                <li>Adobe Illustrator and Photoshop were utilized in designing wireframes and
+    prototypes for new sites</li>
+                <li>Acted as WordPress lead developer and support for several WordPress
+    templates and installs</li>
             </ul>
-        </p>
-    </div>
+            </p>
+            
+            <hr />
+            
+            <p class="workJob">
+            <h3>Eyefinity (VSP Global)</h3>
+            <h4>Java Software Engineer (Contract)</h4>
+            <p class="dateEmployed">May 2012 - October 2012</p>
+            <ul class="workDescription">
+                <li>Object-Oriented Java and JSP were utilized to create and maintain various
+    web applications pertaining to the updated legal requirements for HIPAA</li>
+                <li>Designed and maintained MySQL and DB2 applications, utilizing SQL and
+    commandline to update application information, add new records, and created schema for new applications</li>
+                <li>Diagramed and designed new web applications with other software engineers
+    utilizing UML diagrams and user stories</li>
+                <li>Provided developer support during implementations and acted as lead developer
+    while pushing code to productoin. This required documenting issues,
+    resolving critical issues with production code, and deploying SQL for
+    database adjustments</li>
+            </ul>
+            </p>
+            
+            <hr />
+            
+            <p class="workJob">
+            <h3>Sacramento State University</h3>
+            <h4>Web Developer</h4>
+            <p class="dateEmployed">January 2011 - April 2012</p>
+            <ul class="workDescription">
+                <li>Created and maintained applications utilizing object-oriented PHP, MySQL,
+    JavaScript/jQuery, HTML/CSS, CGI, and Perl</li>
+                <li>Designed and created MySQL schema</li>
+                <li>Created graphics, wireframes, and prototypes for new web applications and
+    sites utilizing Adobe Illustrator and Adobe Photoshop</li>
+            </ul>
+            </p>
+            
+        </div>
+        <!-- end work experience --> 
+        
+        <!-- Portfolio -->
+        <div id="portfolio" class="grid_9 contentSelection">
+            <h2>My Work</h2>
+            <ul class="portfolio">
+                <li class="forwardfocus portfolioItem"><a href="../images/portfolio/forwardfocus.png" class="portfolio_item"><img src="images/spacer.png" alt="Forward Focus Media WordPress Template" /></a></li>
+                <li class="envelopedetails portfolioItem"><a href="../images/portfolio/june2009details.png" class="portfolio_item"><img src="images/spacer.png" alt="Contact Form design prototype" /></a></li>
+                <li class="charlesrich portfolioItem"><a href="../images/portfolio/charlesrich.png" class="portfolio_item"><img src="images/spacer.png" alt="Charles Rich Accounting" /></a></li>
+                <li class="mobilephone portfolioItem"><a href="../images/portfolio/mobilephone.png" class="portfolio_item"><img src="images/spacer.png" alt="Mobile Phone developer design example" /></a></li>
+             </ul>
+        </div>
+     </div><!-- end content -->
 </div>
 
 <script type="text/javascript">
 
-	$("li.skills").click(function() {
-		var content = $("#content");
-		$("li.skills").addClass('selected');
-		$("li.workexp").removeClass('selected');
-		$("li.portfolio").removeClass('selected');
-		
-		//hide any previous classes
-		content.removeAttr("class").hide().fadeIn();
-		
-		//add in relevant classes
-		content.addClass("grid_9 skillsBg");
-		
-		// add in relevant HTML via string
-		var html = "<h1>Web Development</h1>";
-		html += "<ul>";
-		html += "<li>JavaScript/jQuery</li>";
-		html += "<li>HTML/CSS</li>";
-		html += "<li>PHP</li>";
-		html += "<li>MySQL</li>";
-		html += "<li>Java</li>";
-		html += "</ul>";
-		
-		html += "<h1>Graphics</h1>";
-		html += "<ul>";
-		html += "<li>Adobe Illustrator (Print/Web)</li>";
-		html += "<li>Adobe InDesign (Print)</li>";
-		html += "<li>Adobe Photoshop (Print/Web/Photo Manipulation</li>";
-		html += "</ul>";
-		content.html(html);
-	})
-	
-	$("li.workexp").click(function() {
-		var content = $("#content");
-		$("li.workexp").addClass('selected');
-		$("li.portfolio").removeClass('selected');
-		$("li.skills").removeClass('selected');
-		//hide any previous classes
-		content.removeAttr("class").hide().fadeIn();
-		
-		//add in relevant classes
-		content.addClass("grid_9 workexperBg");
-		
-		// add in relevant HTML.  But first, we'll build a string
-		var html = "<h1>VSP Online</h1>";
-		html +="<h2>Web Developer</h2>";
-		html +="<h3>October 2012 - Present</h3>";
-		html +="<ul>";
-		html +="<li>Design wireframes and presentations for projects and sites related to VSP and their partners HTML 5 and CSS 3</li>"
-		html +="<li>Advise business partners and other teams on user experience procredures and best practices</li>";
-		html +="<li>Integrate back-end JSP provided by back-end developers with the front-end user experience</li>";
-		html +="</ul>";
-		
-		html += "<h1>Eyefinity</h1>";
-		html +="<h2>Java Application Developer</h2>";
-		html +="<h3>May 2012 - October 2012</h3>";
-		html +="<ul>";
-		html +="<li>Create web applications utilizing Java, JavaScript, and JSP</li>"
-		html +="<li>Debug faulty code</li>";
-		html +="<li>Update existing applications with new features and up-to-date code</li>";
-		html +="</ul>";
-		
-		html += "<h1>California State University, Sacramento</h1>";
-		html +="<h2>Web Developer</h2>";
-		html +="<h3>January 2010 - May 2012</h3>";
-		html +="<ul>";
-		html +="<li>Create web applications utilizing PHP, MySQL, and related technologies</li>"
-		html +="<li>Create interfaces for new applications, and update interfaces for older applications</li>";
-		html +="<li>Update existing applications with new features and up-to-date code</li>";
-		html +="</ul>";
-		
-		html += "<h1>Apple, Inc</h1>";
-		html +="<h2>At-Home Advisor</h2>";
-		html +="<h3>May 2010 - May 2011</h3>";
-		html +="<ul>";
-		html +="<li>Advise users on iOS best practices</li>"
-		html +="<li>Assisst developers in discovering common issues with iOS devices</li>";
-		html +="<li>Directly assist customers with issues related to iOS</li>";
-		html +="</ul>";
-		
-		html += "<h1>Business Development Institute</h1>";
-		html +="<h2>At-Home Advisor</h2>";
-		html +="<h3>June 2008 - December 2008</h3>";
-		html +="<ul>";
-		html +="<li>Create customized wireframes and designs utilizing Adobe suite (Illustrator and Photoshop)</li>"
-		html +="<li>Translate provided (and created) designs into functional HTML/CSS and JavaScript</li>";
-		html +="<li>Optimize existing sites for proper user experience and search engine optimization</li>";
-		html +="</ul>";
-		
-		content.html(html);
-	})
-	
-	$("li.portfolio").click(function() {
-		var content = $("#content");
-		$("li.portfolio").addClass('selected');
-		$("li.workexp").removeClass('selected');
-		$("li.skills").removeClass('selected');
-		//hide any previous classes
-		content.removeAttr("class").hide().fadeIn();
-		
-		//add in relevant classes
-		content.addClass("grid_9 portfolioBg");
-		
-		var html = "";
-		
-		content.html(html);
-	})
+	$(document).ready(function() {
+	/* hide all of the divs until we want them. */
+	$('#siteWelcomeScreen').show(500);
+	$('.contentSelection').hide();
+	$('#subPageMenu').hide(500);
 
+	/* any time a link is clicked, its HREF should point toward a certain element ID. we will take advantage of that.*/
+	
+	$('a').click(function(e) {
+		
+		/* if it has a certain class, we don't want to hide all contentSelections.*/
+		var linkClass = $(this).attr('class');
+		
+		if(linkClass != 'subLink' && linkClass != 'subSubLink') {
+			/* hide any options already displayed */
+			$('.contentSelection').hide();
+			$('.sublist').hide();
+		}
+		
+		if(linkClass != 'subSubLink') {
+			$('.subSections').hide(500);
+		} else {
+			$('#retrieveAuthList').hide(500);
+			$('#searchMemberSubli').hide(500);
+		}
+
+		/* the href value of the links actually holds the ID of the divs to display.*/
+		var selectedOption = $(this).attr('href');
+		
+		$('.sublist').hide(200);
+		$('#siteWelcomeScreen').hide(500);
+		$('#subPageMenu').show(500);
+		
+		$(selectedOption).show(500);
+	});
+	
+});
+	
 </script>
 </body>
 </html>

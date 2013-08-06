@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (min-width: 768px) {
+	#heading {
+		width: 728px;
+	}
+	
+	#mainContent {
+		width: 728px;
+	}
+	
+	ul#sidebar {
+		width: 19%;
+	}
+	
+	#sidebar li {
+		padding: 10px;
+	}
+	
+	ul.portfolio li.portfolioItem {
+		float: left;
+		min-height: 180px;
+		max-width: 300px;
+		margin: 10px;
+		border: 2px solid #ddd;
+		width: 45%;
+	}
+	
+	ul.portfolio li.portfolioItem a img {
+		width: 100%;
+		height: 180px;
+	}
+}
+
+@media (min-width: 992px) {
+	#heading {
+		width: 940px;
+	}
+	
+	#mainContent {
+		width: 940px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#heading {
+		width: 1000px;
+	}
+	
+	#mainContent {
+		width: 1000px;
+	}
+}
+
+@media (max-width: 767px) {
+	#heading {
+		width: 500px;
+	}
+	
+	#mainContent {
+		width: 500px;
+	}
+	
+	ul#sidebar {
+		width: 16%;
+	}
+	
+	ul.portfolio li.portfolioItem {
+		float: left;
+		min-height: 123px;
+		max-width: 300px;
+		margin: 4px;
+		border: 2px solid #ddd;
+		width: 45%;
+	}
+	
+	ul.portfolio li.portfolioItem a img {
+		width: 100%;
+		height: 123px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#heading {
+		width: 320px;
+	}
+	
+	#mainContent {
+		width: 320px;
+	}
+	
+	ul#sidebar {
+		width: 100%;
+		font-size: 20pt;
+	}
+	
+	ul#sidebar li {
+		width: 100%;
+	}
+	
+	ul.portfolio li.portfolioItem {
+		float: left;
+		min-height: 170px;
+		max-width: 300px;
+		margin: 10px;
+		border: 2px solid #ddd;
+		width: 100%;
+	}
+	
+	ul.portfolio li.portfolioItem a img {
+		width: 100%;
+		height: 170px;
+	}
+}
