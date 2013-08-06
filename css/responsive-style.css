@@ -62,6 +62,15 @@
 		width: 500px;
 	}
 	
+	#lightboxContent {
+		width: 400px;
+	
+	}
+	
+	#lightboxContent img {
+		width: 400px;	
+	}
+	
 	ul#sidebar {
 		width: 16%;
 	}
@@ -88,6 +97,23 @@
 	
 	#mainContent {
 		width: 320px;
+	}
+	
+	#lightboxContent {
+		width: 300px;
+	
+	}
+	
+	.closeBox {
+		font-size: 20px;
+		margin-top: -22px;
+		position: absolute;
+		right: 10px;
+		top: 42px;
+	}
+	
+	#lightboxContent img {
+		width: 300px;	
 	}
 	
 	ul#sidebar {
