@@ -7,18 +7,31 @@ function menu() {
             $('#siteWelcomeScreen').show(500);
             $('.contentSelection').hide();
 	        $('#subPageMenu').hide(500);
+            $('.home').addClass('selectedPage');
+            
         } else {
             $('#siteWelcomeScreen').hide();
             $('.contentSelection').hide();
             $(hash).show(500);
+            
+            // we also add a selected class when they click - it only makes sense to do the same thing here, which will involve some high tech arithmeticky.
+            var selectedElem = hash.slice(hash.indexOf('#') + 1, hash.length);
+            $('.' + selectedElem).addClass('selectedPage');
         }
 
 	/* any time a link is clicked, its HREF should point toward a certain element ID. we will take advantage of that.*/
 	
 	$('.subnav').click(function(e) {
 		e.preventDefault();
+        
 		/* if it has a certain class, we don't want to hide all contentSelections.*/
-		var linkClass = $(this).attr('class');
+		var linkClass = $(this).attr('id');
+        
+        // remove the selected class
+        $('#sidebar li').removeClass('selectedPage');
+        
+        // but let's make sure that class is set again :-)
+        $(this).parent().addClass('selectedPage');
 		
 		if(linkClass != 'subLink' && linkClass != 'subSubLink') {
 			/* hide any options already displayed */
