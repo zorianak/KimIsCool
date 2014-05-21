@@ -1,4 +1,6 @@
 /* logic for our lightbox */
+
+function lightbox() {
 	$('.portfolio_item').click(function(e) {
 		// prevent browser from opening image in new tab
 		e.preventDefault();
@@ -26,3 +28,5 @@
 		$('#lightboxWrapper').hide(500);
 		$('#lightboxWrapper').remove();
 	});
+    
+}

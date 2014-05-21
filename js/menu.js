@@ -1,7 +1,17 @@
 /* hide all of the divs until we want them. */
-	$('#siteWelcomeScreen').show(500);
-	$('.contentSelection').hide();
-	$('#subPageMenu').hide(500);
+function menu() {
+    
+    // we want to check for the document's hash. This helps with bookmarking.
+        var hash = location.hash;
+        if ( hash == '') {
+            $('#siteWelcomeScreen').show(500);
+            $('.contentSelection').hide();
+	        $('#subPageMenu').hide(500);
+        } else {
+            $('#siteWelcomeScreen').hide();
+            $('.contentSelection').hide();
+            $(hash).show(500);
+        }
 
 	/* any time a link is clicked, its HREF should point toward a certain element ID. we will take advantage of that.*/
 	
@@ -24,7 +34,11 @@
 		}
 
 		/* the href value of the links actually holds the ID of the divs to display.*/
+        // also, update the URL hash
 		var selectedOption = $(this).attr('href');
+        document.location.hash = selectedOption;
+        // I don't like that there isn't any real display that the link has been interacted with
+        $(this).addClass('pageName');
 		
 		$('.sublist').hide(200);
 		$('#siteWelcomeScreen').hide(500);
@@ -32,3 +46,5 @@
 		
 		$(selectedOption).show(500);
 	});
+    
+}
